@@ -11,3 +11,4 @@
 * rm test.js // delete
 * rm -r test // remove entire folder
 * open index.html // open file
+* npm init - create npm file which is package.json
