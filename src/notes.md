@@ -15,4 +15,5 @@
 * npm install webpack --save-dev &rarr; saves webpack as dev dependency
 * npm uninstall jQuery --save &rarr; remove dependency
 * sudo npm install live-server --global
-
+* Webpack bundles (js, css, jpg, png)
+* npm install webpack-cli --save-dev (command line interface for webpack as dev dependency)
