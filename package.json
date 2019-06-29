@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mostmojo/forkify/issues"
   },
-  "homepage": "https://github.com/mostmojo/forkify#readme"
+  "homepage": "https://github.com/mostmojo/forkify#readme",
+  "devDependencies": {
+    "webpack": "^4.35.0"
+  }
 }

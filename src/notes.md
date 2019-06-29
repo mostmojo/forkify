@@ -12,3 +12,7 @@
 * rm -r test // remove entire folder
 * open index.html // open file
 * npm init - create npm file which is package.json
+* npm install webpack --save-dev &rarr; saves webpack as dev dependency
+* npm uninstall jQuery --save &rarr; remove dependency
+* sudo npm install live-server --global
+
