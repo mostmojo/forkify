@@ -17,3 +17,5 @@
 * sudo npm install live-server --global
 * Webpack bundles (js, css, jpg, png)
 * npm install webpack-cli --save-dev (command line interface for webpack as dev dependency)
+* npm install webpack-dev-server --save-dev &rarr; to install dev server and create local server
+* npm run start, after adding `"start": "webpack-dev-server --mode development --open"` to `package.json`
