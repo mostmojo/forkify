@@ -19,3 +19,4 @@
 * npm install webpack-cli --save-dev (command line interface for webpack as dev dependency)
 * npm install webpack-dev-server --save-dev &rarr; to install dev server and create local server
 * npm run start, after adding `"start": "webpack-dev-server --mode development --open"` to `package.json`
+* `npm install html-webpack-plugin` in terminal then add `const HtmlWebpackPlugin = require('html-webpack-plugin);` to the webpack.config.js file and add the `plugins` with destination and file name &rarr; `./src/index.html`.
