@@ -20,3 +20,5 @@
 * npm install webpack-dev-server --save-dev &rarr; to install dev server and create local server
 * npm run start, after adding `"start": "webpack-dev-server --mode development --open"` to `package.json`
 * `npm install html-webpack-plugin` in terminal then add `const HtmlWebpackPlugin = require('html-webpack-plugin);` to the webpack.config.js file and add the `plugins` with destination and file name &rarr; `./src/index.html`.
+* npm run start will load the server
+* npm run dev will start the dev server with the 'production' based site that is bundled into bundle.js
