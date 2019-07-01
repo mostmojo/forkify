@@ -25,3 +25,28 @@
 * `npm install babel-core babel-preset-env babel-loader --save dev` &rarr; install babel core, presets and loader packages to dev dependency to compile ES6 back to ES5. Add `modules` rules to `webpack.config.js`
 * create `.babelrc` file and add the presets to check for browsers and compile according to versions
 * `npm install babel-polyfill --save` to polyfill any JS features we can't convert to ES5, with babel loaders, also add `babel-polyfill` to `module.exports`
+
+* **Bug fix**: change polyfil presets for babel to:
+
+```
+{
+    "presets": [
+        ["@babel/env", {
+            "targets": {
+                "browsers": [
+                    "last 5 versions",
+                    "ie >= 8"
+                ]
+            }
+        }]
+    ]
+}
+
+& =>
+npm install --save-dev @babel/core @babel/preset-env babel-loader
+npm install --save @babel/polyfill
+```
+
+## MVC
+
+
