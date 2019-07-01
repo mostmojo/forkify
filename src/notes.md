@@ -4,6 +4,8 @@
 * Weboack - ES6 module bundler, JS bundle size, SASS bundling
 * NodeJS, npm - 3 party packages
 
+-----
+
 ## Terminal
 
 * `cp fileName ..` &larr; destination // copy
@@ -47,6 +49,10 @@ npm install --save-dev @babel/core @babel/preset-env babel-loader
 npm install --save @babel/polyfill
 ```
 
-## MVC
+-----
 
+## MVC - Model View Controller
 
+Search.js &rarr; index.js &rarr; searchView.js
+
+* Covention - write model files in capital letters. Ex. **Search.js**
