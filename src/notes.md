@@ -56,3 +56,11 @@ npm install --save @babel/polyfill
 Search.js &rarr; index.js &rarr; searchView.js
 
 * Covention - write model files in capital letters. Ex. **Search.js**
+
+-----
+
+## APIs
+
+* Use [food2fork](https://www.food2fork.com/about/api) API to grab search queries
+* Use axios with `npm install axios` to handle the equivalent of `fetch`
+* Log recipe data to console
