@@ -70,3 +70,7 @@ Search.js &rarr; index.js &rarr; searchView.js
 ## Search model
 
 * Create default class constructor Search with query parameter and property used to fetch data
+
+-----
+
+* State: storing some value or values. In contrast, something that is stateless does not store any values between point in time A and point in time B.
