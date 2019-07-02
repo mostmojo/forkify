@@ -3,6 +3,14 @@ import { elements } from './base';
 // Don't need `{}` or `return` as ES6 shorthand - one liner
 export const getInput = () => elements.searchInput.value;
 
+export const clearInput = () => {
+    elements.searchInput.value = '';
+};
+
+export const clearResults = () => {
+    elements.searchResList.innerHTML = '';
+};
+
 const renderRecipe = recipe => {
     const markup = `
         <li>
@@ -18,8 +26,8 @@ const renderRecipe = recipe => {
         </li>
     `;
     elements.searchResList.insertAdjacentHTML('beforeend', markup);
-}
+};
 
 export const renderResults = recipes => {
     recipes.forEach(renderRecipe);
-}
+};
