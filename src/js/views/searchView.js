@@ -1,5 +1,4 @@
 import { elements } from './base';
-import { cursorTo } from 'readline';
 
 // Don't need `{}` or `return` as ES6 shorthand - one liner
 export const getInput = () => elements.searchInput.value;
@@ -31,10 +30,10 @@ const limitRecipeTitle = (title, limit = 17) => {
         }, 0);
 
         // return the result
-        return `${newTitle}.join(' ')...`;
+        return `${newTitle.join(' ')}...`;
     }
     return title;
-}
+};
 
 const renderRecipe = recipe => {
     const markup = `
@@ -44,7 +43,7 @@ const renderRecipe = recipe => {
                     <img src="${recipe.image_url}" alt="Test">
                 </figure>
                 <div class="results__data">
-                    <h4 class="results__name">${recipe.title}</h4>
+                    <h4 class="results__name">${limitRecipeTitle(recipe.title)}</h4>
                     <p class="results__author">${recipe.publisher}</p>
                 </div>
             </a>

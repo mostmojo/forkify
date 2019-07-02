@@ -29,7 +29,7 @@ const controlSearch = async () => {
         // 5) Render results on UI
         searchView.renderResults(state.search.result);
     }
-}
+};
 elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
