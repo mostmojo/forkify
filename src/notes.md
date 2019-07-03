@@ -76,3 +76,11 @@ Search.js &rarr; index.js &rarr; searchView.js
 * **State**: storing some value or values. In contrast, something that is stateless does not store any values between point in time A and point in time B.
 
 * Create control Search function to be called on submit event that - gets a query from view, makes new search object and adds it to state, fetches results from API request and renders results to console.
+
+-----
+
+## Render svg 'loading' with animation
+
+* Style the `.loader svg` class in CSS and use `animation: rotate 1.5s infinite linear` to trigger `@keyframes rotate` which has states 0-100% with a `360deg` rotation.
+* Create a `export const renderLoader` function with a parent param that injects the svg with template literals `afterbegin` with `insertAdjacentHTML`. ENSURE **EXPORT** IS USED.
+* `import` the `renderLoader` function into `index.js` from the `base.js` file and put it `elements.searchRes` as param, which contains the `.results` class. So the magic will be inserted into that class 👽
