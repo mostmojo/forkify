@@ -95,7 +95,7 @@ Search.js &rarr; index.js &rarr; searchView.js
 
 -----
 
-`slice()` - method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included)
+* `slice()` - method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included)
 
 ```
 var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
@@ -106,3 +106,5 @@ console.log(animals.slice(2));
 console.log(animals.slice(2, 4));
 // expected output: Array ["camel", "duck"]
 ```
+
+* `Math.ceil()` rounds up - always. Ex. 4.1 -> 5
