@@ -119,4 +119,4 @@ console.log(animals.slice(2, 4));
 
 * `const btn = e.target.closest('.btn-inline');` - to get the target event closest to the given class
 
-*c `onst goToPage = parseInt(btn.dataset.goto, 10);` - grab the data stored in the dataset within the html &rarr; `data-goto`
+* `const goToPage = parseInt(btn.dataset.goto, 10);` - grab the data stored in the dataset within the html &rarr; `data-goto`
