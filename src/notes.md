@@ -84,3 +84,11 @@ Search.js &rarr; index.js &rarr; searchView.js
 * Style the `.loader svg` class in CSS and use `animation: rotate 1.5s infinite linear` to trigger `@keyframes rotate` which has states 0-100% with a `360deg` rotation.
 * Create a `export const renderLoader` function with a parent param that injects the svg with template literals `afterbegin` with `insertAdjacentHTML`. ENSURE **EXPORT** IS USED.
 * `import` the `renderLoader` function into `index.js` from the `base.js` file and put it `elements.searchRes` as param, which contains the `.results` class. So the magic will be inserted into that class 👽
+
+-----
+
+## Remove 'loading' svg
+
+* Create clearLoader function to `querySelect` the class `.loader` using: `if (loader) loader.parentElement.removeChild(loader);` - since it's a node in the DOM, go up to parent and use removeChild method with loader class (selected from before) as a parameter.
+* Ensure to `export` clearLoader in base.js
+* Ensure to `import` clearLoader in index.js
