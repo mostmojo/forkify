@@ -92,3 +92,17 @@ Search.js &rarr; index.js &rarr; searchView.js
 * Create clearLoader function to `querySelect` the class `.loader` using: `if (loader) loader.parentElement.removeChild(loader);` - since it's a node in the DOM, go up to parent and use removeChild method with loader class (selected from before) as a parameter.
 * Ensure to `export` clearLoader in base.js
 * Ensure to `import` clearLoader in index.js
+
+-----
+
+`slice()` - method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included)
+
+```
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// expected output: Array ["camel", "duck"]
+```
