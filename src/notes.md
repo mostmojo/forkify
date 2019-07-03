@@ -116,3 +116,7 @@ console.log(animals.slice(2, 4));
 * Create renderResults() with start and end consts, new array using slice method to get recipes
 * renderButtons to have pages, next/prev buttons with logical operators to render according to condition
 * createButton - to render html with button / ternary operators to determine the type and page number
+
+* `const btn = e.target.closest('.btn-inline');` - to get the target event closest to the given class
+
+*c `onst goToPage = parseInt(btn.dataset.goto, 10);` - grab the data stored in the dataset within the html &rarr; `data-goto`

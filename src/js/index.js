@@ -39,5 +39,8 @@ elements.searchForm.addEventListener('submit', e => {
 
 elements.searchResPages.addEventListener('click', e=> {
     const btn = e.target.closest('.btn-inline');
-    console.log(btn);
+    if (btn) {
+        const goToPage = parseInt(btn.dataset.goto, 10);
+        console.log(goToPage);
+    }
 });
