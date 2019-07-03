@@ -5,7 +5,7 @@ export const elements = {
     searchResList: document.querySelector('.results__list')
 };
 
-const renderLoader = parent => {
+export const renderLoader = parent => {
     const loader = `
     <div class="loader">
         <svg>
