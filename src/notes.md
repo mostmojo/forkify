@@ -111,6 +111,8 @@ console.log(animals.slice(2, 4));
 
 -----
 
+## Pagination
+
 * Create renderResults() with start and end consts, new array using slice method to get recipes
 * renderButtons to have pages, next/prev buttons with logical operators to render according to condition
 * createButton - to render html with button / ternary operators to determine the type and page number
