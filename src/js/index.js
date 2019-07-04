@@ -18,7 +18,8 @@ const state = {}
 
 const controlSearch = async () => {
     // 1) Get query from view
-    const query = searchView.getInput(); // TODO
+    // const query = searchView.getInput(); //
+    const query = 'pizza';
 
     if (query) {
         // 2) New search object and add it to state
@@ -37,12 +38,18 @@ const controlSearch = async () => {
             clearLoader();
             searchView.renderResults(state.search.result);
         } catch(error) {
-            alert('Error, something\'s wrong with the search...');
+            alert('Error, something is wrong with the search...');
             clearLoader();
         }
     }
 };
 elements.searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+    controlSearch();
+});
+
+//TESTING PURPOSES ONLY
+window.addEventListener('load', e => {
     e.preventDefault();
     controlSearch();
 });
@@ -70,6 +77,9 @@ const controlRecipe = async () => {
 
         // Create new recipe object
         state.recipe = new Recipe(id);
+
+        //TESTING
+        window.r = state.recipe;
 
         try {
             // Get recipe data
