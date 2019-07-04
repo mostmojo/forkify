@@ -132,3 +132,11 @@ console.log(animals.slice(2, 4));
 * `import Recipe from './models/Recipe';` and create a test `const r = new Recipe(33353);` with the ID fetched when pressing on a pizza recipe item. This new instance of recipe can be plugged into `r.getRecipe();` and due to prototypial inheritance, it'll trigger the getRecipe method in the model and log `res` string from axios
 * In `getRecipe` function in the `Recipe.js model`, set the properties fetched from `axios API` to this variable like so: `this.title = res.data.recipe.title;` - this ensures that the call with the ID inputted, is related to its specific title, image, url, ingredients, etc. Thus, data will **only** refer to that specific recipe
 * calcTime() function to get length of ingredients and divide it by 3 and * 15 minute intervals, assuming it takes 15 min per 3 ingredients. calcServings() function to show estimate of 4 servings.
+
+-----
+
+* How to read data from the page URL
+* How to respond to the `hashchange` event
+* How to add the same event listener to multiple events
+
+* &rarr; Set an `.addEventListener` to the global `window` object, and set it to detect a `hashchange`. Use `const id = window.location.hash;` to use global window object, grab the location (in the search bar) of the hash, anything after the `#` ex. `#334554`;

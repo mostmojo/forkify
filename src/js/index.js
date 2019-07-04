@@ -54,6 +54,23 @@ elements.searchResPages.addEventListener('click', e => {
 /**
  * RECIPE CONTROLLER
  */
-const r = new Recipe(46956);
-r.getRecipe();
-console.log(r);
+
+const controlRecipe = () => {
+    // Get ID from url
+    const id = window.location.hash.replace('#', '');
+    console.log(id);
+
+    if (id) {
+        //Prepare UI for changes
+
+        // Create new recipe object
+        state.recipe = new Recipe(id);
+        // Get recipe data
+        state.recipe.getRecipe();
+        // Calculate servings and time
+
+        // Render recipe
+    }
+}
+
+window.addEventListener('hashchange', controlRecipe);
