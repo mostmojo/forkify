@@ -130,4 +130,5 @@ console.log(animals.slice(2, 4));
 * In same scope of Recipe class, make asynchronous getRecipe function, using axios to fetch recipe with `https://www.food2fork.com/api/get?key=${key}&rId=${this.id}` - ` key & rId` from documentation.
 * Log result to console to see what is being retrieved
 * **Reusability** &rarr; create new `config.js` file with `proxy` & `keys`, import it into both `Search` and `Recipe` models
+* `import Recipe from './models/Recipe';` and create a test `const r = new Recipe(33353);` with the ID fetched when pressing on a pizza recipe item. This new instance of recipe can be pluged into `r.getRecipe();` and due to prototypial inheritance, it'll trigger the getRecipe method in the model and log `res` string from axios
 
