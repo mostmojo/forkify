@@ -165,3 +165,4 @@ window.addEventListener('load', controlRecipe);
 * Create `parseIngredients` function that has a long form array of values and a short form array of their abbreviations.
 * `Map` to make a new array on the `this.ingredients` values and lower case them
 * Once lowercased, go through `unitsLong` with `forEach` and replace the current unit with the index of the 2nd `unitsShort` array at counter position `[i]`
+* use `.replace(/ *\([^)]*\) */g, "");` to replace any string containing brackets, with an empty string &rarr; nothing. Ex. Mike (Greatest) -> Mike.
