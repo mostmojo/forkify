@@ -154,3 +154,14 @@ window.addEventListener('load', controlRecipe);
 ```
 
 * add `try {}` `catch(err) {}` around `awaits` in both search and recipe controllers to throw and error in case the awaits promise is faulty
+
+-----
+
+## Recipe model to process ingredient list
+
+* Array methods like `map`, `slice`, `findIndex`, `includes`
+* `Eval` function
+
+* Create `parseIngredients` function that has a long form array of values and a short form array of their abbreviations.
+* `Map` to make a new array on the `this.ingredients` values and lower case them
+* Once lowercased, go through `unitsLong` with `forEach` and replace the current unit with the index of the 2nd `unitsShort` array at counter position `[i]`
