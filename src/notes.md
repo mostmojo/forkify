@@ -122,9 +122,8 @@ console.log(animals.slice(2, 4));
 * `const goToPage = parseInt(btn.dataset.goto, 10);` - grab the data stored in the dataset within the html &rarr; `data-goto`
 
 -----
-🐥
 
-## Recipe
+## Recipe 🐥
 
 * Create new Recipe class with constructor parameter `id` - that way we can have lots of id instances
 * In same scope of Recipe class, make asynchronous getRecipe function, using axios to fetch recipe with `https://www.food2fork.com/api/get?key=${key}&rId=${this.id}` - ` key & rId` from documentation.

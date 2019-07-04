@@ -56,3 +56,4 @@ elements.searchResPages.addEventListener('click', e => {
  */
 const r = new Recipe(46956);
 r.getRecipe();
+console.log(r);
