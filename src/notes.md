@@ -140,3 +140,7 @@ console.log(animals.slice(2, 4));
 * How to add the same event listener to multiple events
 
 * &rarr; Set an `.addEventListener` to the global `window` object, and set it to detect a `hashchange`. Use `const id = window.location.hash;` to use global window object, grab the location (in the search bar) of the hash, anything after the `#` ex. `#334554`;
+* Replacee hash symbol `#` with nothing `''`
+* Create new recipe object based on previous model (class Recipe) &rarr; `new Recipe(id)` and store it in `state.recipe` *(all our data is stored here, in one central place)*
+* call state.recipe.getRecipe() with `await` - since it's an `async fn` it'll return a promise. It'll await for the promise to return back with the resolved value
+* Then calc the time and servings and log it all to console
