@@ -120,3 +120,11 @@ console.log(animals.slice(2, 4));
 * `const btn = e.target.closest('.btn-inline');` - to get the target event closest to the given class
 
 * `const goToPage = parseInt(btn.dataset.goto, 10);` - grab the data stored in the dataset within the html &rarr; `data-goto`
+
+-----
+🐥
+
+## Recipe
+
+* Create new Recipe class with constructor parameter `id` - that way we can have lots of id instances
+
