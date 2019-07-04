@@ -129,5 +129,5 @@ console.log(animals.slice(2, 4));
 * In same scope of Recipe class, make asynchronous getRecipe function, using axios to fetch recipe with `https://www.food2fork.com/api/get?key=${key}&rId=${this.id}` - ` key & rId` from documentation.
 * Log result to console to see what is being retrieved
 * **Reusability** &rarr; create new `config.js` file with `proxy` & `keys`, import it into both `Search` and `Recipe` models
-* `import Recipe from './models/Recipe';` and create a test `const r = new Recipe(33353);` with the ID fetched when pressing on a pizza recipe item. This new instance of recipe can be pluged into `r.getRecipe();` and due to prototypial inheritance, it'll trigger the getRecipe method in the model and log `res` string from axios
-
+* `import Recipe from './models/Recipe';` and create a test `const r = new Recipe(33353);` with the ID fetched when pressing on a pizza recipe item. This new instance of recipe can be plugged into `r.getRecipe();` and due to prototypial inheritance, it'll trigger the getRecipe method in the model and log `res` string from axios
+* In `getRecipe` function in the `Recipe.js model`, set the properties fetched from `axios API` to this variable like so: `this.title = res.data.recipe.title;` - this ensures that the call with the ID inputted, is related to its specific title, image, url, ingredients, etc. Thus, data will **only** refer to that specific recipe
