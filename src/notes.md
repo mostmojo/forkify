@@ -127,4 +127,7 @@ console.log(animals.slice(2, 4));
 ## Recipe
 
 * Create new Recipe class with constructor parameter `id` - that way we can have lots of id instances
+* In same scope of Recipe class, make asynchronous getRecipe function, using axios to fetch recipe with `https://www.food2fork.com/api/get?key=${key}&rId=${this.id}` - ` key & rId` from documentation.
+* Log result to console to see what is being retrieved
+* **Reusability** &rarr; create new `config.js` file with `proxy` & `keys`, import it into both `Search` and `Recipe` models
 
