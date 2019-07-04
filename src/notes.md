@@ -144,3 +144,13 @@ console.log(animals.slice(2, 4));
 * Create new recipe object based on previous model (class Recipe) &rarr; `new Recipe(id)` and store it in `state.recipe` *(all our data is stored here, in one central place)*
 * call state.recipe.getRecipe() with `await` - since it's an `async fn` it'll return a promise. It'll await for the promise to return back with the resolved value
 * Then calc the time and servings and log it all to console
+
+* `['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));` - 2 event listeners to global window object, instead of having to write:
+
+```
+window.addEventListener('hashchange', controlRecipe);
+window.addEventListener('load', controlRecipe);
+
+```
+
+* add `try {}` `catch(err) {}` around `awaits` in both search and recipe controllers to throw and error in case the awaits promise is faulty
