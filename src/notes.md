@@ -167,3 +167,6 @@ window.addEventListener('load', controlRecipe);
 * Once lowercased, go through `unitsLong` with `forEach` and replace the current unit with the index of the 2nd `unitsShort` array at counter position `[i]`
 * use `.replace(/ *\([^)]*\) */g, "");` to replace any string containing brackets, with an empty string &rarr; nothing. Ex. Mike (Greatest) -> Mike.
 * `map()` method always needs a return to 'save' something into its current position
+* **PARSE INGREDIENTS INTO COUNT, UNIT AND INGREDIENT**
+* Take each ingredient and `.split(' ');`
+* Use `.findIndex(el2 => unitShort.includes(el2));` &rarr; a new ES7 method to find the index of any element, which `includes()` that element. Ex. Does the array include an element called 'ounces', what's its index?
