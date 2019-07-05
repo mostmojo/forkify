@@ -60,6 +60,12 @@ export default class Recipe {
                     count = eval(arrIng.slice(0, unitIndex).join('+'));
                 }
 
+                objIng = {
+                    count,
+                    unit: arrIng[unitIndex],
+                    ingredient: arrIng.slice(unitIndex + 1).join(' ')
+                };
+
             } else if (parseInt(arrIng[0], 10)) {
                 // There is NO unit, but the 1st element is a number
                 objIng = {
