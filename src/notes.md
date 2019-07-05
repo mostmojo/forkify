@@ -123,7 +123,7 @@ console.log(animals.slice(2, 4));
 
 -----
 
-## Recipe 🐥
+## Recipe
 
 * Create new Recipe class with constructor parameter `id` - that way we can have lots of id instances
 * In same scope of Recipe class, make asynchronous getRecipe function, using axios to fetch recipe with `https://www.food2fork.com/api/get?key=${key}&rId=${this.id}` - ` key & rId` from documentation.
@@ -157,7 +157,7 @@ window.addEventListener('load', controlRecipe);
 
 -----
 
-## Recipe model to process ingredient list
+## Recipe model to process ingredient list 🐥
 
 * Array methods like `map`, `slice`, `findIndex`, `includes`
 * `Eval` function
@@ -170,3 +170,6 @@ window.addEventListener('load', controlRecipe);
 * **PARSE INGREDIENTS INTO COUNT, UNIT AND INGREDIENT**
 * Take each ingredient and `.split(' ');`
 * Use `.findIndex(el2 => unitShort.includes(el2));` &rarr; a new ES7 method to find the index of any element, which `includes()` that element. Ex. Does the array include an element called 'ounces', what's its index?
+* Once the `unit index` is determined, if it's > -1, slice it into two parts Ex. `4 1/2 -> [ 4, 1/2 ]` after the first index `0`
+* Use `eval()` to evaluate numbers and add them up if they are obscure. `4 + 1/2 = 4.5`, use `slice()` to slice methods up at a given index, and later `join()` them with `(' ')` empty space.
+* Use `parseInt` to convert any numbered strings into integers
