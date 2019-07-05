@@ -16,6 +16,7 @@ const createIngredient = ingredient => `
         </div>
     </li>
  `;
+
 export const renderRecipe = recipe => {
     const markup = `
             <figure class="recipe__fig">

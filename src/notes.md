@@ -173,3 +173,11 @@ window.addEventListener('load', controlRecipe);
 * Once the `unit index` is determined, if it's > -1, slice it into two parts Ex. `4 1/2 -> [ 4, 1/2 ]` after the first index `0`
 * Use `eval()` to evaluate numbers and add them up if they are obscure. `4 + 1/2 = 4.5`, use `slice()` to slice methods up at a given index, and later `join()` them with `(' ')` empty space.
 * Use `parseInt` to convert any numbered strings into integers
+* Create a recipeView.js and import elements from base file which contain the querySelectors with class `.recipe`
+* Create a clearRecipe function to set i`nnerHTML = ''` of class `.recipe`
+* Make `createIngredient` function with ingredient parameter that has a list item with image, count, unit & ingredient
+* Make `renderRecipe` function with recipe parameter that contains all the markup for the recipe - details, info, images, buttons, like
+* Use `${recipe.ingredients.map(el => createIngredient(el)).join('')}` to render ingredient from `createIngredient` function
+* Call `elements.recipe.insertAdjacentHTML('afterbegin', markup);` to render it
+* `import * as recipeView from './views/recipeView';` into index.js to use in the controller
+* add `renderLoader(elements.recipe)` and `recipeView.renderRecipe(state.recipe)` into the restaurant controller
