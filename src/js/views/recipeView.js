@@ -7,8 +7,8 @@ export const clearRecipe = () => {
 
 const formatCount = count => {
     if (count) {
-        // count - 2.5 --> 2 1/2
-        // count - 0.5 --> 1/2
+        // count = 2.5 --> 5/2 --> 2 1/2
+        // count = 0.5 --> 1/2
         const [int, dec] = count.toString().split('.').map(el => parseInt(el, 10));
 
         if (!dec) return count;
@@ -17,7 +17,8 @@ const formatCount = count => {
             const fr = new Fraction(count);
             return `${fr.numerator}/${fr.denominator}`
         } else {
-            const fr = new Fraction()
+            const fr = new Fraction(count - int); // 2.5 - 2 = 1/2
+            return `${int} ${fr.numerator}/${fr.denominator}` // 2 1/2
         }
     }
     return '?';
