@@ -181,3 +181,11 @@ window.addEventListener('load', controlRecipe);
 * Call `elements.recipe.insertAdjacentHTML('afterbegin', markup);` to render it
 * `import * as recipeView from './views/recipeView';` into index.js to use in the controller
 * add `renderLoader(elements.recipe)` and `recipeView.renderRecipe(state.recipe)` into the restaurant controller
+
+-----
+
+## 🐥
+
+* Unique IDs with external package
+* `Array.slice` and  `Array.splice`; `Array.findIndex` & `Array.find`
+
