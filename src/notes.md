@@ -189,10 +189,14 @@ window.addEventListener('load', controlRecipe);
 * Unique IDs with external package
 * `Array.slice` and  `Array.splice`; `Array.findIndex` & `Array.find`
 * **`cmd + alt + &rarr;` to toggle between tabs in VS Code**
+* **`alt + &rarr;` to toggle through words in VS Code**
 
 --
 
 * Create new list model and build a list class with a constructor pointing to an empty array
 * create `addItem` function with params `count, unit, ingredient` and set an item object to `count: count, unit: unit and ingredient: ingredient`
 * Install `uniqid` library and import it to list model
-
+* Add `deleteItem()` function which iterates through `this.items`, takes an item and checks whether its `id` is equal to the passed in `id` to `findIndex` & use `this.items.splice(index, 1)` to remove or 'splice' one element at that index only
+* make `updateCount` function with params `(id, count)`, loop through items object with `find()` ES6 method and check whether id is equal to id being passed in, then set the count to the newCount. Ex. List item is apple 2, count makes it 3, set the new count of 3 to the apple list item.
+* By exporting `export default class List {}` and `import List from './models/List';` in the index.js controller, we can run a test to see if we can access the new instance of list.
+* set `window.l = new List();` and call `window.l` in the console. Empty list array 🧙‍♂️
