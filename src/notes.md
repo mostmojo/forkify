@@ -202,3 +202,4 @@ window.addEventListener('load', controlRecipe);
 * set `window.l = new List();` and call `window.l` in the console. Empty list array 🧙‍♂️
 * `this.items.push(item)` when new `addItems` call is made to ensure item ends up in items array.
 * Test in console `l.addItem(2, 'tbsp', 'salt')`, `deleteItem` & `updateItem` to see changes in array - marking List model 'backend' complete ☑
+* Create `deleteItem()` function with an `id` parameter, containing a `const item = document.querySelector([date-itemid="${id}"]);` - the `[]` is the way to access data attributes. Since the items are part of a node list, select the `.item.parentElement` and `.removeChild(item)`.
