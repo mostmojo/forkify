@@ -189,3 +189,7 @@ window.addEventListener('load', controlRecipe);
 * Unique IDs with external package
 * `Array.slice` and  `Array.splice`; `Array.findIndex` & `Array.find`
 
+~~~~~
+
+* Create new list model and build a list class with a constructor pointing to an empty array
+* create `addItem` function with params `count, unit, ingredient` and set an item object to `count: count, unit: unit and ingredient: ingredient`
