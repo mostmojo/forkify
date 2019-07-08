@@ -114,7 +114,8 @@ const controlRecipe = async () => {
      // Add each ingredient to the list
      state.recipe.ingredients.forEach(el => {
          const item = state.list.addItem(el.count, el.unit, el.ingredient);
-     })
+         listView.renderItem(item);
+     });
  }
 
 
@@ -130,8 +131,6 @@ elements.recipe.addEventListener('click', e => {
         state.recipe.updateServings('inc');
         recipeView.updateServingsIngredients(state.recipe);
     } else if (e.target.matches('.recipe__btn--add, .recipe__btn--add *')) {
-        controlList
+        controlList();
     }
 });
-
-window.l = new List();
