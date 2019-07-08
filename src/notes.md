@@ -200,3 +200,5 @@ window.addEventListener('load', controlRecipe);
 * make `updateCount` function with params `(id, count)`, loop through items object with `find()` ES6 method and check whether id is equal to id being passed in, then set the count to the newCount. Ex. List item is apple 2, count makes it 3, set the new count of 3 to the apple list item.
 * By exporting `export default class List {}` and `import List from './models/List';` in the index.js controller, we can run a test to see if we can access the new instance of list.
 * set `window.l = new List();` and call `window.l` in the console. Empty list array 🧙‍♂️
+* `this.items.push(item)` when new `addItems` call is made to ensure item ends up in items array.
+* Test in console `l.addItem(2, 'tbsp', 'salt')`, `deleteItem` & `updateItem` to see changes in array - marking List model 'backend' complete ☑
