@@ -157,7 +157,7 @@ window.addEventListener('load', controlRecipe);
 
 -----
 
-## Recipe model to process ingredient list 🐥
+## Recipe model to process ingredient list
 
 * Array methods like `map`, `slice`, `findIndex`, `includes`
 * `Eval` function
@@ -184,14 +184,18 @@ window.addEventListener('load', controlRecipe);
 
 -----
 
-## 🐥
-
-* Unique IDs with external package
-* `Array.slice` and  `Array.splice`; `Array.findIndex` & `Array.find`
+## 🐥 VS & Git Shortcuts
 * **`cmd + alt + &rarr;` to toggle between tabs in VS Code**
 * **`alt + &rarr;` to toggle through words in VS Code**
 * **`ctrl + g` to go to specific line in VS Code**
---
+* **`git commit --amend -m "an updated commit message"` ammend a typo in previous git message**
+
+-----
+
+## List model, controller and view
+
+* Unique IDs with external package
+* `Array.slice` and  `Array.splice`; `Array.findIndex` & `Array.find`
 
 * Create new list model and build a list class with a constructor pointing to an empty array
 * create `addItem` function with params `count, unit, ingredient` and set an item object to `count: count, unit: unit and ingredient: ingredient`

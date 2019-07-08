@@ -1,5 +1,6 @@
 import { elements } from './base';
 
+// export renderItem to use in index controller
 export const renderItem = item => {
     const markup = `
         <li class="shopping__item" data-item-id=${item.id}>
