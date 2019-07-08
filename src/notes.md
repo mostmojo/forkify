@@ -190,7 +190,7 @@ window.addEventListener('load', controlRecipe);
 * `Array.slice` and  `Array.splice`; `Array.findIndex` & `Array.find`
 * **`cmd + alt + &rarr;` to toggle between tabs in VS Code**
 * **`alt + &rarr;` to toggle through words in VS Code**
-
+* **`ctrl + g` to go to specific line in VS Code**
 --
 
 * Create new list model and build a list class with a constructor pointing to an empty array
