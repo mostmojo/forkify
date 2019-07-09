@@ -1,11 +1,12 @@
 import Search from './models/Search';
 import Recipe from './models/Recipe';
 import List from './models/List';
+import Likes from './models/Likes';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
 import { elements, renderLoader, clearLoader } from './views/base';
-import Likes from './models/Likes';
+
 
 
 /* Global sate of the app
@@ -159,17 +160,17 @@ elements.shopping.addEventListener('click', e => {
         // Toggle the like button
 
         // Add like to the UI list
-
+        console.log(state.likes);
 
     // User HAS liked current recipe
      } else {
          // Remove like to the state
+         state.likes.deleteLike(currentID);
 
         // Toggle the like button
 
         // Remove like to the UI list
-
-
+        console.log(state.likes);
      }
  };
 

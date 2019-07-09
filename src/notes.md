@@ -189,6 +189,7 @@ window.addEventListener('load', controlRecipe);
 * **`alt + &rarr;` to toggle through words in VS Code**
 * **`ctrl + g` to go to specific line in VS Code**
 * **`git commit --amend -m "an updated commit message"` ammend a typo in previous git message**
+* **`cmd + -> / <-` jump to end of the current line**
 
 -----
 
@@ -214,6 +215,14 @@ window.addEventListener('load', controlRecipe);
 
 ## Likes
 
+### Model
 * Create likes model with a `class Likes constructor` that holds an empty array of `likes`
-* Make addLike, deleteLike, getNumLikes and isLiked methods, similar to List model
-* Since relative, we need to have id, author, title and image - that'll be displayed
+* Make `addLike`, `deleteLike`, `getNumLikes` and `isLiked` methods, similar to `List` model
+* Since relative, we need to have `id`, `author`, `title` and `image` - that'll be displayed
+
+### Controller
+* If `!state.likes` doesn't exist, create a new instance of `Likes()` from the model
+* set the `currentID` to `state.recipe.id;`
+* If the like button instance has not been liked, `addLike` to the `state.likes object` and save that as `newLike` var
+* `newLike` should hold `currentID`, `state.recipe.title`, `author` and `img`
+* If user has already liked the current recipe, and they've reclicked the like button, like has to be removed from state object using `state.likes.deleteLike(currentID)`, which contains the `splice` method once id is found and compared with `findIndex`
