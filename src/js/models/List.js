@@ -5,26 +5,25 @@ export default class List {
         this.items = [];
     }
 
-    addItem(count, unit, ingredient) { // Ex. (2, 'tbsp', 'salt')
+    addItem(count, unit, ingredient) {
         const item = {
             id: uniqid(),
             count,
             unit,
             ingredient
         }
-        this.items.push(item); // push new item into empty items array
+        this.items.push(item);
         return item;
     }
 
     deleteItem(id) {
-        const index = this.items.findIndex(item => item.id === id); // does current item id === the passed in id?
-        // [2,4,8] splice(1,2); -> [4,8], original array is [2] - mutated.
-        // [2,4,8] slice(1,2); -> 4, original array is [2,4,8] - not mutated. Only returns 4 because the end index is never included
+        const index = this.items.findIndex(el => el.id === id);
+        // [2,4,8] splice(1, 2) -> returns [4, 8], original array is [2]
+        // [2,4,8] slice(1, 2) -> returns 4, original array is [2,4,8]
         this.items.splice(index, 1);
     }
 
     updateCount(id, newCount) {
-        // loop through items object, find id === id passed in and set the count to the newCount
-        this.items.find(item => item.id === id).count = newCount;
+        this.items.find(el => el.id === id).count = newCount;
     }
 }

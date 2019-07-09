@@ -1,6 +1,5 @@
 import { elements } from './base';
 
-// export renderItem to use it in the index.js listControl
 export const renderItem = item => {
     const markup = `
         <li class="shopping__item" data-itemid=${item.id}>
