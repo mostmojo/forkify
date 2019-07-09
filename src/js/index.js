@@ -5,6 +5,7 @@ import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
 import { elements, renderLoader, clearLoader } from './views/base';
+import Likes from './models/Likes';
 
 
 /* Global sate of the app
@@ -141,6 +142,36 @@ elements.shopping.addEventListener('click', e => {
 /**
  * LIKE CONTROLLER
  */
+
+ const controlLike = () => {
+     if (!state.likes) state.likes = new Likes();
+     const currentID = state.recipe.id;
+
+     // User has NOT yet liked current recipe
+     if (!state.likes.isLiked(currentID)) {
+        // Add like to the state
+        const newLike = state.likes.addLike(
+            currentID,
+            state.recipe.title,
+            state.recipe.author,
+            state.recipe.img
+        );
+        // Toggle the like button
+
+        // Add like to the UI list
+
+
+    // User HAS liked current recipe
+     } else {
+         // Remove like to the state
+
+        // Toggle the like button
+
+        // Remove like to the UI list
+
+
+     }
+ };
 
 
 
