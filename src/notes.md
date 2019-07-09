@@ -227,4 +227,10 @@ window.addEventListener('load', controlRecipe);
 * `newLike` should hold `currentID`, `state.recipe.title`, `author` and `img`
 * If user has already liked the current recipe, and they've reclicked the like button, like has to be removed from state object using `state.likes.deleteLike(currentID)`, which contains the `splice` method once id is found and compared with `findIndex`
 
+### View
+
+* Make `toggleLikeBtn` function with `isLiked` param from `like` model
+* Check if param `isLiked` is true, if so, then give it `icon-heart` svg, if false give it `icon-heart-outlined`. Store outcome in `iconString`
+* grab `recipe__love` child use in that html element and set the attribute of the href to dynamic value, holding the new variable `iconString`
+
 -----
