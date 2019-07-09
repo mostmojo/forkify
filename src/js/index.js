@@ -150,6 +150,7 @@ elements.shopping.addEventListener('click', e => {
 
  // test
 state.likes = new Likes();
+likesView.toggleLikeMenu(state.likes.getNumLikes());
 
  const controlLike = () => {
      if (!state.likes) state.likes = new Likes();
@@ -179,6 +180,7 @@ state.likes = new Likes();
         // Remove like to the UI list
         console.log(state.likes);
      }
+     likesView.toggleLikeMenu(state.likes.getNumLikes());
  };
 
 
