@@ -167,8 +167,10 @@ likesView.toggleLikeMenu(state.likes.getNumLikes());
         );
         // Toggle the like button
             likesView.toggleLikeBtn(true);
+
         // Add like to the UI list
-        console.log(state.likes);
+            likesView.renderLike(newLike);
+
 
     // User HAS liked current recipe
      } else {
@@ -177,8 +179,10 @@ likesView.toggleLikeMenu(state.likes.getNumLikes());
 
         // Toggle the like button
         likesView.toggleLikeBtn(false);
+
         // Remove like to the UI list
-        console.log(state.likes);
+        likesView.deleteLike(currentID);
+
      }
      likesView.toggleLikeMenu(state.likes.getNumLikes());
  };
