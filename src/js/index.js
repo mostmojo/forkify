@@ -5,6 +5,7 @@ import Likes from './models/Likes';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
+import * as likesView from './views/likesView';
 import { elements, renderLoader, clearLoader } from './views/base';
 
 
@@ -158,7 +159,7 @@ elements.shopping.addEventListener('click', e => {
             state.recipe.img
         );
         // Toggle the like button
-
+            likesView.toggleLikeBtn(true);
         // Add like to the UI list
         console.log(state.likes);
 
@@ -168,7 +169,7 @@ elements.shopping.addEventListener('click', e => {
          state.likes.deleteLike(currentID);
 
         // Toggle the like button
-
+        likesView.toggleLikeBtn(false);
         // Remove like to the UI list
         console.log(state.likes);
      }
