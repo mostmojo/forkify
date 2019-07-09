@@ -209,3 +209,11 @@ window.addEventListener('load', controlRecipe);
 * Create `deleteItem()` function with an `id` parameter, containing a `const item = document.querySelector([date-itemid="${id}"]);` - the `[]` is the way to access data attributes. Since the items are part of a node list, select the `.item.parentElement` and `.removeChild(item)`.
 * make `controlList` function to create a new list in `state object` if it doesn't exist, with `new List()` instance. Add ingredients to the list by looping through `state.recipe.ingredients` and calling `addItems` function with `el.count, el.unit, el.ingredient`, then call `listView.renderItem(item)` from the `listView` view, and render the items to the UI.
 * add event listeners to trigger events and get the shopping items data attributes' and set them = `id`, then `state.list.deleteItem` to get rid of it in the model and also `listView.deleteItem(id)` to delete it from the UI, do the same for update.
+
+-----
+
+## Likes
+
+* Create likes model with a `class Likes constructor` that holds an empty array of `likes`
+* Make addLike, deleteLike, getNumLikes and isLiked methods, similar to List model
+* Since relative, we need to have id, author, title and image - that'll be displayed
