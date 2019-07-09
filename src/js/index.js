@@ -187,9 +187,6 @@ likesView.toggleLikeMenu(state.likes.getNumLikes());
      likesView.toggleLikeMenu(state.likes.getNumLikes());
  };
 
-
-
-
 // Handling recipe button clicks
 elements.recipe.addEventListener('click', e => {
     if (e.target.matches('.btn-decrease, .btn-decrease *')) {
