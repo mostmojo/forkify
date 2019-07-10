@@ -18,12 +18,10 @@ import { elements, renderLoader, clearLoader } from './views/base';
 */
 
 const state = {}
-window.state = state;
 
 /**
  * SEARCH CONTROLLER
  */
-
 const controlSearch = async () => {
     // 1) Get query from view
     const query = searchView.getInput(); //
@@ -67,11 +65,9 @@ elements.searchResPages.addEventListener('click', e => {
 /**
  * RECIPE CONTROLLER
  */
-
 const controlRecipe = async () => {
     // Get ID from url
     const id = window.location.hash.replace('#', '');
-    console.log(id);
 
     if (id) {
 
@@ -113,7 +109,6 @@ const controlRecipe = async () => {
 /**
  * LIST CONTROLLER
  */
-
 const controlList = () => {
     // Create a new list IF there in none yet
     if (!state.list) state.list = new List();
@@ -147,7 +142,6 @@ elements.shopping.addEventListener('click', e => {
 /**
  * LIKE CONTROLLER
  */
-
  const controlLike = () => {
      if (!state.likes) state.likes = new Likes();
      const currentID = state.recipe.id;
@@ -217,4 +211,3 @@ elements.recipe.addEventListener('click', e => {
     }
 });
 
-window.l = new List();
